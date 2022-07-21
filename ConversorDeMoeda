@@ -1,0 +1,24 @@
+from currency_converter import CurrencyConverter
+import os
+import time
+
+os.system("clear")
+
+c = CurrencyConverter()
+
+condicao = True
+while (condicao):
+    moeda1 = input("Insira o código da Moeda que deseja converter: ")
+    moeda2 = input("Insira o código da Moeda para a qual deve ser convertida: ")
+    valor = int(input("Valor deve ser convertido: "))
+
+    final = c.convert(valor, moeda1.upper(), moeda2.upper())
+
+    print('{0: .2f} {1} são {2: .2f} {3}'. format(valor, moeda1.upper(), final, moeda2.upper()))
+    condicao = int(input("Deseja converter novamente? - 1 Converter Novamente / 0 para sair: "))
+    os.system("clear")
+    if condicao == 0:
+        print("Adeus! :(")
+        time.sleep(2)
+        exit()
+        condicao = False
