@@ -1,9 +1,7 @@
 import random
 import os
 import time
-from xmlrpc.client import boolean
 
-from numpy import False_
 os.system("clear")
 condicao = True
 campeaosupp = 1
